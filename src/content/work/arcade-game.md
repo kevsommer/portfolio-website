@@ -1,6 +1,6 @@
 ---
 title: Arcade Space Shoot-Em'-Up Game
-publishDate: 2019-10-02 00:00:00
+publishDate: 2023-04-02 00:00:00
 img: /assets/arcade-game-screenshot.png
 img_alt: Screenshot from the Arcade Space Shoot-Em'-Up Game.
 description: |
