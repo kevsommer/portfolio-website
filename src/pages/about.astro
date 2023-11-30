@@ -1,11 +1,15 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import Pill from "../components/Pill.astro";
 ---
 
-<BaseLayout title="About | Kevin Sommer" description="About Kevin Sommer Lorem Ipsum">
+<BaseLayout
+	title="About | Kevin Sommer"
+	description="About Kevin Sommer Lorem Ipsum"
+>
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
@@ -24,68 +28,109 @@ import Hero from '../components/Hero.astro';
 				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						RWTH Aachen graduate who studied Computer Science with a focus on data science and machine learning. Dedicated to software engineering,
-						having several years of expertise, and specialising in Frontend web development. Searching mostly for Frontend Developer, Full Stack Developer
-						and Machine Learning positions.
+						RWTH Aachen graduate who studied Computer Science with a
+						focus on data science and machine learning. Dedicated to
+						software engineering, having several years of expertise,
+						and specialising in Frontend web development.
 					</p>
-					
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Education</h2>
 				<div class="content">
-					<p><b>B.Sc. Computer Science</b> 2017-2020</p>
+					<p class="degree-title">B.Sc. Computer Science 2017-2020</p>
 					<p>RWTH Aachen University</p>
 					<p>
 						<ul>
-							<li><b>Courses:</b> Basic Techniques in Computer Graphics, Introduction to Web Technologies, Functional Programming, Numerical Mathematics</li>
-							<li><b>Thesis:</b> An Intelligent Tool for the Collection of Training Data for Art Curation</li>
-						</ul>
-					</p>
-
-					<br/>
-					<p><b>M.Sc. Computer Science</b> 2020-2022</p>
-					<p>RWTH Aachen University</p>
-					<p>
-						<ul>
-							<li><b>Courses:</b> Introduction to Data Science, Machine Learning, Text Mining, Web Mining, Social Data Science, Advanced Internet Technology, Communication Systems Engineering</li>
-							<li><b>Thesis:</b> Investigating Machine Learning Techniques for Network Error Classification using Explicit Measurement Bit</li>
+							<li>
+								<b>Courses:</b> Basic Techniques in Computer Graphics,
+								Introduction to Web Technologies, Functional Programming,
+								Numerical Mathematics
+							</li>
+							<li>
+								<b>Thesis:</b> An Intelligent Tool for the Collection
+								of Training Data for Art Curation
+							</li>
 						</ul>
 					</p>
 				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
+
+				<br />
 				<div class="content">
 					<p>
-						<h5>Programming Languages</h5>
+						<b class="degree-title">M.Sc. Computer Science</b> 2020-2022
+					</p>
+					<p>RWTH Aachen University</p>
+					<p>
 						<ul>
-							<li>JavaScript/TypeScript (React, Next.js. etc.)</li>
-							<li>Python (Pandas, PyTorch, NumPy, Scikit‑learn, FastApi. etc.)</li>
-							<li>HTML/CSS</li>
-							<li>C++ (NS‑3)</li>
-							<li>SQL (PostgreSQL, SQLite)</li>
-						</ul>
-						
-						<h5>Misc</h5>
-						<ul>
-							<li>Linux</li>
-							<li>Shell (Bash/Zsh)</li>
-							<li>Git</li>
-							<li>LaTeX (Overleaf)</li>
-							<li>NGINX</li>
-						</ul>
-
-						<h5>Soft Skills</h5>
-						<ul>
-							<li>Communication</li>
-							<li>Time Management</li>
-							<li>Teamwork</li>
-							<li>Problem‑Solving</li>
-							<li>Documentation</li>
+							<li>
+								<b>Courses:</b> Introduction to Data Science, Machine
+								Learning, Text Mining, Web Mining, Social Data Science,
+								Advanced Internet Technology, Communication Systems
+								Engineering
+							</li>
+							<li>
+								<b>Thesis:</b> Investigating Machine Learning Techniques
+								for Network Error Classification using Explicit Measurement
+								Bit
+							</li>
 						</ul>
 					</p>
 				</div>
+				<section>
+					<h2 class="section-title">Skills</h2>
+					<div class="content">
+						<p class="">
+							<h5>Programming Languages</h5>
+							<div class="tags">
+								<Pill>JavaScript</Pill>
+								<Pill>TypeScript</Pill>
+								<Pill>Python</Pill>
+								<Pill>HTML/CSS</Pill>
+								<Pill>C++</Pill>
+								<Pill>SQL</Pill>
+							</div>
+						</p>
+
+						<p>
+							<h5>Frameworks/Libraries</h5>
+							<div class="tags">
+								<Pill>React</Pill>
+								<Pill>Next.js</Pill>
+								<Pill>Pandas</Pill>
+								<Pill>PyTorch</Pill>
+								<Pill>NumPy</Pill>
+								<Pill>Scikit‑learn</Pill>
+								<Pill>FastApi</Pill>
+								<Pill>NS‑3</Pill>
+								<Pill>PostgreSQL</Pill>
+								<Pill>SQLite</Pill>
+							</div>
+						</p>
+
+						<p>
+							<h5>Misc</h5>
+							<div class="tags">
+								<Pill>Linux</Pill>
+								<Pill>Shell (Bash/Zsh)</Pill>
+								<Pill>Git</Pill>
+								<Pill>LaTeX (Overleaf)</Pill>
+								<Pill>NGINX</Pill>
+							</div>
+						</p>
+
+						<p>
+							<h5>Soft Skills</h5>
+							<div class="tags">
+								<Pill>Communication</Pill>
+								<Pill>Time Management</Pill>
+								<Pill>Teamwork</Pill>
+								<Pill>Problem‑Solving</Pill>
+								<Pill>Documentation</Pill>
+							</div>
+						</p>
+					</div>
+				</section>
 			</section>
 		</main>
 
@@ -98,6 +143,20 @@ import Hero from '../components/Hero.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 3.5rem;
+	}
+
+	.degree-title {
+		font-weight: 800;
+	}
+
+	.pill {
+		margin: 0.25em 0.125em;
+		display: inline-block;
+		padding: 0.25em 0.5em;
+		border-radius: 1em;
+		font-weight: 500;
+		background-color: var(--accent-overlay);
+		color: var(--gray-0);
 	}
 
 	img {
@@ -121,6 +180,9 @@ import Hero from '../components/Hero.astro';
 
 	.content {
 		grid-column: 2 / 4;
+		padding: 1em;
+		border-radius: 1em;
+		box-shadow: 0px 2px 8px var(--gray-700);
 	}
 
 	.content :global(a) {
@@ -132,6 +194,12 @@ import Hero from '../components/Hero.astro';
 	.content :global(a:hover),
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
 	}
 
 	@media (min-width: 50em) {
