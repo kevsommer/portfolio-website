@@ -15,14 +15,7 @@ import Pill from "../components/Pill.astro";
 			<Hero
 				title="About"
 				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					style="margin: 0 auto; display: block;"
-					width="600"
-					src="/assets/about_hero.png"
-					alt="Kevin Sommer at work with a colleague"
-				/>
-			</Hero>
+			/>
 
 			<section>
 				<h2 class="section-title">Background</h2>
@@ -40,6 +33,8 @@ import Pill from "../components/Pill.astro";
 				<div class="content">
 					<p class="degree-title">B.Sc. Computer Science 2017-2020</p>
 					<p>RWTH Aachen University</p>
+					<br />
+
 					<p>
 						<ul>
 							<li>
@@ -61,6 +56,7 @@ import Pill from "../components/Pill.astro";
 						<b class="degree-title">M.Sc. Computer Science</b> 2020-2022
 					</p>
 					<p>RWTH Aachen University</p>
+					<br />
 					<p>
 						<ul>
 							<li>
@@ -78,64 +74,51 @@ import Pill from "../components/Pill.astro";
 					</p>
 				</div>
 				<section>
-					<h2 class="section-title">Skills</h2>
+					<h2 class="section-title">Languages</h2>
 					<div class="content">
-						<p class="">
-							<h5>Programming Languages</h5>
-							<div class="tags">
-								<Pill>JavaScript</Pill>
-								<Pill>TypeScript</Pill>
-								<Pill>Python</Pill>
-								<Pill>HTML/CSS</Pill>
-								<Pill>C++</Pill>
-								<Pill>SQL</Pill>
-							</div>
-						</p>
+						<div class="tags">
+							<Pill>JavaScript</Pill>
+							<Pill>TypeScript</Pill>
+							<Pill>Python</Pill>
+							<Pill>HTML/CSS</Pill>
+							<Pill>C++</Pill>
+							<Pill>SQL</Pill>
+						</div>
+					</div>
+				</section>
 
-						<p>
-							<h5>Frameworks/Libraries</h5>
-							<div class="tags">
-								<Pill>React</Pill>
-								<Pill>Next.js</Pill>
-								<Pill>Pandas</Pill>
-								<Pill>PyTorch</Pill>
-								<Pill>NumPy</Pill>
-								<Pill>Scikit‑learn</Pill>
-								<Pill>FastApi</Pill>
-								<Pill>NS‑3</Pill>
-								<Pill>PostgreSQL</Pill>
-								<Pill>SQLite</Pill>
-							</div>
-						</p>
+				<section>
+					<h2 class="section-title">Frameworks/Libraries</h2>
+					<div class="content">
+						<div class="tags">
+							<Pill>React</Pill>
+							<Pill>Next</Pill>
+							<Pill>Vue</Pill>
+							<Pill>FastApi</Pill>
+							<Pill>PyTorch</Pill>
+							<Pill>sklearn</Pill>
+							<Pill>SQLite</Pill>
+						</div>
+					</div>
+				</section>
 
-						<p>
-							<h5>Misc</h5>
-							<div class="tags">
-								<Pill>Linux</Pill>
-								<Pill>Shell (Bash/Zsh)</Pill>
-								<Pill>Git</Pill>
-								<Pill>LaTeX (Overleaf)</Pill>
-								<Pill>NGINX</Pill>
-							</div>
-						</p>
-
-						<p>
-							<h5>Soft Skills</h5>
-							<div class="tags">
-								<Pill>Communication</Pill>
-								<Pill>Time Management</Pill>
-								<Pill>Teamwork</Pill>
-								<Pill>Problem‑Solving</Pill>
-								<Pill>Documentation</Pill>
-							</div>
-						</p>
+				<section>
+					<h2 class="section-title">Misc</h2>
+					<div class="content">
+						<div class="tags">
+							<Pill>Linux</Pill>
+							<Pill>Bash</Pill>
+							<Pill>Git</Pill>
+							<Pill>LaTeX</Pill>
+							<Pill>NGINX</Pill>
+						</div>
 					</div>
 				</section>
 			</section>
 		</main>
-
-		<ContactCTA />
 	</div>
+
+	<ContactCTA />
 </BaseLayout>
 
 <style>
@@ -182,7 +165,7 @@ import Pill from "../components/Pill.astro";
 		grid-column: 2 / 4;
 		padding: 1em;
 		border-radius: 1em;
-		box-shadow: 0px 2px 8px var(--gray-700);
+		box-shadow: 0px 1px 4px var(--gray-700);
 	}
 
 	.content :global(a) {
