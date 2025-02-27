@@ -3,118 +3,104 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
-import Pill from "../components/Pill.astro";
 ---
 
 <BaseLayout
   title="About | Kevin Sommer"
-  description="About Kevin Sommer Lorem Ipsum"
->
+  description="About Kevin Sommer">
   <div class="stack gap-20">
     <main class="wrapper about">
       <Hero
         title="About"
-        tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-      />
+        tagline="Thanks for stopping by. Read below to learn more about myself and my background." />
 
-      <section>
-        <h2 class="section-title">Background</h2>
+      <div class="c-resume">
         <div class="content">
-          <p>
-            RWTH Aachen graduate who studied Computer Science with a
-            focus on data science and machine learning. Dedicated to
-            software engineering, having several years of expertise,
-            and specialising in Frontend web development.
-          </p>
-        </div>
-      </section>
-      <section>
-        <h2 class="section-title">Education</h2>
-        <div class="content">
-          <p class="degree-title">B.Sc. Computer Science 2017-2020</p>
-          <p>RWTH Aachen University</p>
+          <h4>Work Experience</h4>
+          
+          <div class="content-box">
+            <p class="degree-title">
+              <b>Frontend Developer</b> Nov 2019 - Jun 2023
+            </p>
+            <p>TLK Energy</p>
+            <br />
+            <p>
+              Energy and Thermodynamics Simulation Interface: built a web-based simulator using React and TypeScript to simulate thermodynamics scenarios for buildings and machines to enable clients to visualize and optimize system performance
+            </p>
+          </div>
+
           <br />
 
-          <p>
-            <ul>
-              <li>
-                <b>Courses:</b> Basic Techniques in Computer Graphics,
-                Introduction to Web Technologies, Functional Programming,
-                Numerical Mathematics
-              </li>
-              <li>
-                <b>Thesis:</b> An Intelligent Tool for the Collection
-                of Training Data for Art Curation
-              </li>
-            </ul>
-          </p>
-        </div>
+          <div class="content-box">
+            <p class="degree-title">
+              <b>Frontend Developer</b>
+            </p>
+            <p>Modell Aachen</p>
+            <br />
 
-        <br />
-        <div class="content">
-          <p>
-            <b class="degree-title">M.Sc. Computer Science</b> 2020-2022
-          </p>
-          <p>RWTH Aachen University</p>
+          </div>
+
           <br />
-          <p>
-            <ul>
-              <li>
-                <b>Courses:</b> Introduction to Data Science, Machine
-                Learning, Text Mining, Web Mining, Social Data Science,
-                Advanced Internet Technology, Communication Systems
-                Engineering
-              </li>
-              <li>
-                <b>Thesis:</b> Investigating Machine Learning Techniques
-                for Network Error Classification using Explicit Measurement
-                Bit
-              </li>
-            </ul>
-          </p>
+
+          <div class="content-box">
+            <p class="degree-title">
+              <b>Full Stack Developer</b>
+            </p>
+            <p>Modell Aachen</p>
+          </div>
         </div>
-        <section>
-          <h2 class="section-title">Languages</h2>
-          <div class="content">
-            <div class="tags">
-              <Pill>JavaScript</Pill>
-              <Pill>TypeScript</Pill>
-              <Pill>Python</Pill>
-              <Pill>HTML/CSS</Pill>
-              <Pill>C++</Pill>
-              <Pill>SQL</Pill>
-            </div>
-          </div>
-        </section>
 
-        <section>
-          <h2 class="section-title">Frameworks/Libraries</h2>
-          <div class="content">
-            <div class="tags">
-              <Pill>React</Pill>
-              <Pill>Next</Pill>
-              <Pill>Vue</Pill>
-              <Pill>FastApi</Pill>
-              <Pill>PyTorch</Pill>
-              <Pill>sklearn</Pill>
-              <Pill>SQLite</Pill>
-            </div>
-          </div>
-        </section>
+        <div class="content">
+          <h4>Education</h4>
 
-        <section>
-          <h2 class="section-title">Misc</h2>
-          <div class="content">
-            <div class="tags">
-              <Pill>Linux</Pill>
-              <Pill>Bash</Pill>
-              <Pill>Git</Pill>
-              <Pill>LaTeX</Pill>
-              <Pill>NGINX</Pill>
-            </div>
+          <div class="content-box">
+            <p class="degree-title">
+              <b>B.Sc. Computer Science</b> 2017-2020
+            </p>
+            <p>RWTH Aachen University</p>
+            <br />
+
+            <p>
+              <ul>
+                <li>
+                  <b>Courses:</b> Basic Techniques in Computer Graphics,
+                  Introduction to Web Technologies, Functional Programming,
+                  Numerical Mathematics
+                </li>
+                <li>
+                  <b>Thesis:</b> An Intelligent Tool for the Collection
+                  of Training Data for Art Curation
+                </li>
+              </ul>
+            </p>
           </div>
-        </section>
-      </section>
+
+          <br />
+
+          <div class="content-box">
+            <p>
+              <b class="degree-title">M.Sc. Computer Science</b> 2020-2022
+            </p>
+            <p>RWTH Aachen University</p>
+            <br />
+            <p>
+              <ul>
+                <li>
+                  <b>Courses:</b> Introduction to Data Science, Machine
+                  Learning, Text Mining, Web Mining, Social Data Science,
+                  Advanced Internet Technology, Communication Systems
+                  Engineering
+                </li>
+                <li>
+                  <b>Thesis:</b> Investigating Machine Learning Techniques
+                  for Network Error Classification using Explicit Measurement
+                  Bit
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 
@@ -122,30 +108,17 @@ import Pill from "../components/Pill.astro";
 </BaseLayout>
 
 <style>
+  .c-resume {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
   .about {
     display: flex;
     flex-direction: column;
     gap: 3.5rem;
-  }
-
-  .degree-title {
-    font-weight: 800;
-  }
-
-  .pill {
-    margin: 0.25em 0.125em;
-    display: inline-block;
-    padding: 0.25em 0.5em;
-    border-radius: 1em;
-    font-weight: 500;
-    background-color: var(--accent-overlay);
-    color: var(--gray-0);
-  }
-
-  img {
-    margin-top: 1.5rem;
-    border-radius: 1.5rem;
-    box-shadow: var(--shadow-md);
   }
 
   section {
@@ -155,14 +128,7 @@ import Pill from "../components/Pill.astro";
     color: var(--gray-200);
   }
 
-  .section-title {
-    grid-column-start: 1;
-    font-size: var(--text-xl);
-    color: var(--gray-0);
-  }
-
   .content {
-    grid-column: 2 / 4;
     padding: 1em;
     border-radius: 1em;
     box-shadow: 0px 1px 4px var(--gray-700);
@@ -179,22 +145,7 @@ import Pill from "../components/Pill.astro";
     text-decoration-color: currentColor;
   }
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
   @media (min-width: 50em) {
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 60% 1fr;
-    }
-
-    .about > :global(:first-child) {
-      grid-column-start: 2;
-    }
-
     section {
       display: contents;
       font-size: var(--text-lg);
