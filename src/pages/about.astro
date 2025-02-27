@@ -110,7 +110,7 @@ import Hero from "../components/Hero.astro";
 <style>
   .c-resume {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 2rem;
     padding: 2rem 0;
   }
@@ -149,6 +149,13 @@ import Hero from "../components/Hero.astro";
     section {
       display: contents;
       font-size: var(--text-lg);
+    }
+
+    .c-resume {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
     }
   }
 </style>
