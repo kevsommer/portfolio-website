@@ -15,9 +15,9 @@ import ResumeItem from "../components/ResumeItem.astro";
         title="About"
         tagline="Thanks for stopping by. Read below to learn more about myself and my background." />
 
-      <div class="c-resume">
+      <div class="resume">
         <div class="content">
-          <h4>Work Experience</h4>
+          <h4 class="resume-title">Work Experience</h4>
           
           <ResumeItem
             jobTitle="Frontend Developer"
@@ -25,15 +25,11 @@ import ResumeItem from "../components/ResumeItem.astro";
             company="TLK Energy"
             description="Energy and Thermodynamics Simulation Interface: built a web-based simulator using React and TypeScript to simulate thermodynamics scenarios for buildings and machines to enable clients to visualize and optimize system performance" />
 
-          <br />
-
           <ResumeItem
             jobTitle="Frontend Developer"
             timePeriod=""
             company="Modell Aachen"
             description="" />
-
-          <br />
 
           <ResumeItem
             jobTitle="Frontend Developer"
@@ -43,54 +39,19 @@ import ResumeItem from "../components/ResumeItem.astro";
         </div>
 
         <div class="content">
-          <h4>Education</h4>
+          <h4 class="resume-title">Education</h4>
 
-          <div class="content-box">
-            <p class="degree-title">
-              <b>B.Sc. Computer Science</b> 2017-2020
-            </p>
-            <p>RWTH Aachen University</p>
-            <br />
+          <ResumeItem 
+            jobTitle="B.Sc. Computer Science"
+            timePeriod="2017-2020"
+            company="RWTH Aachen University"
+            description="Courses: Basic Techniques in Computer Graphics, Introduction to Web Technologies, Functional Programming, Numerical Mathematics" />
 
-            <p>
-              <ul>
-                <li>
-                  <b>Courses:</b> Basic Techniques in Computer Graphics,
-                  Introduction to Web Technologies, Functional Programming,
-                  Numerical Mathematics
-                </li>
-                <li>
-                  <b>Thesis:</b> An Intelligent Tool for the Collection
-                  of Training Data for Art Curation
-                </li>
-              </ul>
-            </p>
-          </div>
-
-          <br />
-
-          <div class="content-box">
-            <p>
-              <b class="degree-title">M.Sc. Computer Science</b> 2020-2022
-            </p>
-            <p>RWTH Aachen University</p>
-            <br />
-            <p>
-              <ul>
-                <li>
-                  <b>Courses:</b> Introduction to Data Science, Machine
-                  Learning, Text Mining, Web Mining, Social Data Science,
-                  Advanced Internet Technology, Communication Systems
-                  Engineering
-                </li>
-                <li>
-                  <b>Thesis:</b> Investigating Machine Learning Techniques
-                  for Network Error Classification using Explicit Measurement
-                  Bit
-                </li>
-              </ul>
-            </p>
-          </div>
+          <ResumeItem 
+            jobTitle="M.Sc. Computer Science"
+            timePeriod="2020-2022"
+            company="RWTH Aachen University"
+            description="Courses: Introduction to Data Science, Machine Learning, Text Mining, Web Mining, Social Data Science, Advanced Internet Technology, Communication Systems Engineering" />
         </div>
       </div>
     </main>
@@ -100,11 +61,15 @@ import ResumeItem from "../components/ResumeItem.astro";
 </BaseLayout>
 
 <style>
-  .c-resume {
+  .resume {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     padding: 2rem 0;
+  }
+
+  .resume-title {
+    margin-bottom: 1rem;
   }
   
   .about {
@@ -124,6 +89,9 @@ import ResumeItem from "../components/ResumeItem.astro";
     padding: 1em;
     border-radius: 1em;
     box-shadow: 0px 1px 4px var(--gray-700);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .content :global(a) {
@@ -143,7 +111,7 @@ import ResumeItem from "../components/ResumeItem.astro";
       font-size: var(--text-lg);
     }
 
-    .c-resume {
+    .resume {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
