@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
+import ResumeItem from "../components/ResumeItem.astro";
 ---
 
 <BaseLayout
@@ -18,36 +19,27 @@ import Hero from "../components/Hero.astro";
         <div class="content">
           <h4>Work Experience</h4>
           
-          <div class="content-box">
-            <p class="degree-title">
-              <b>Frontend Developer</b> Nov 2019 - Jun 2023
-            </p>
-            <p>TLK Energy</p>
-            <br />
-            <p>
-              Energy and Thermodynamics Simulation Interface: built a web-based simulator using React and TypeScript to simulate thermodynamics scenarios for buildings and machines to enable clients to visualize and optimize system performance
-            </p>
-          </div>
+          <ResumeItem
+            jobTitle="Frontend Developer"
+            timePeriod="Nov 2019 - Jun 2023"
+            company="TLK Energy"
+            description="Energy and Thermodynamics Simulation Interface: built a web-based simulator using React and TypeScript to simulate thermodynamics scenarios for buildings and machines to enable clients to visualize and optimize system performance" />
 
           <br />
 
-          <div class="content-box">
-            <p class="degree-title">
-              <b>Frontend Developer</b>
-            </p>
-            <p>Modell Aachen</p>
-            <br />
-
-          </div>
+          <ResumeItem
+            jobTitle="Frontend Developer"
+            timePeriod=""
+            company="Modell Aachen"
+            description="" />
 
           <br />
 
-          <div class="content-box">
-            <p class="degree-title">
-              <b>Full Stack Developer</b>
-            </p>
-            <p>Modell Aachen</p>
-          </div>
+          <ResumeItem
+            jobTitle="Frontend Developer"
+            timePeriod=""
+            company="Modell Aachen"
+            description="" />
         </div>
 
         <div class="content">

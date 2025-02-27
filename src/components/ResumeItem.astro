@@ -1,0 +1,38 @@
+---
+interface Props {
+  jobTitle: string,
+  timePeriod: string,
+  company: string,
+  description: string,
+}
+
+const {  jobTitle, timePeriod, company, description } = Astro.props;
+---
+
+<div class="c-resume-item">
+  <p class="c-resume-item__title">
+    <b>{jobTitle}</b> {timePeriod} 
+  </p>
+  <p class="c-resume-item__company">{company}</p>
+  <br />
+  <p>
+    {description}
+  </p>
+</div>
+
+<style>
+.c-resume-item {
+  border: 1px solid var(--gray-700);
+  border-left: 5px solid var(--gray-300);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.c-resume-item__title {
+  font-size: large;
+}
+
+.c-resume-item__company {
+  font-style: italic !important;
+}
+</style>
