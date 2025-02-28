@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
+import Pill from "../components/Pill.astro";
 import ResumeItem from "../components/ResumeItem.astro";
 ---
 
@@ -18,40 +19,56 @@ import ResumeItem from "../components/ResumeItem.astro";
       <div class="c-about__resume">
         <div class="content">
           <h4 class="c-about__resume-title">Work Experience</h4>
+          <ResumeItem
+            jobTitle="Full Stack Developer"
+            timePeriod="Sep 2024 - Present"
+            company="Modell Aachen"
+            description="" />
+          
+          <ResumeItem
+            jobTitle="Frontend Developer"
+            timePeriod="Jul 2023 - Aug 2024"
+            company="Modell Aachen"
+            description="" />
 
           <ResumeItem
             jobTitle="Frontend Developer"
             timePeriod="Nov 2019 - Jun 2023"
             company="TLK Energy"
             description="Energy and Thermodynamics Simulation Interface: built a web-based simulator using React and TypeScript to simulate thermodynamics scenarios for buildings and machines to enable clients to visualize and optimize system performance" />
-
-          <ResumeItem
-            jobTitle="Frontend Developer"
-            timePeriod=""
-            company="Modell Aachen"
-            description="" />
-
-          <ResumeItem
-            jobTitle="Frontend Developer"
-            timePeriod=""
-            company="Modell Aachen"
-            description="" />
         </div>
 
         <div class="content">
           <h4 class="c-about__resume-title">Education</h4>
 
           <ResumeItem 
-            jobTitle="B.Sc. Computer Science"
-            timePeriod="2017-2020"
-            company="RWTH Aachen University"
-            description="Courses: Basic Techniques in Computer Graphics, Introduction to Web Technologies, Functional Programming, Numerical Mathematics" />
-
-          <ResumeItem 
             jobTitle="M.Sc. Computer Science"
             timePeriod="2020-2022"
             company="RWTH Aachen University"
             description="Courses: Introduction to Data Science, Machine Learning, Text Mining, Web Mining, Social Data Science, Advanced Internet Technology, Communication Systems Engineering" />
+
+          <ResumeItem 
+            jobTitle="B.Sc. Computer Science"
+            timePeriod="2017-2020"
+            company="RWTH Aachen University"
+            description="Courses: Basic Techniques in Computer Graphics, Introduction to Web Technologies, Functional Programming, Numerical Mathematics" />
+        </div>
+
+        <div class="c-about__skill-section">
+          <div class="content">
+            <h4>Skills</h4>
+            <div class="c-about__skills">
+              <b>Frontend</b>
+              <Pill>React</Pill>
+              <Pill>Vue</Pill>
+              <Pill>TypeScript</Pill>
+            </div>
+            <div class="c-about__skills">
+              <b>Backend</b>
+              <Pill>Elixir</Pill>
+              <Pill>Python</Pill>
+              <Pill>Perl</Pill>
+            </div>
         </div>
       </div>
     </main>
@@ -78,6 +95,19 @@ import ResumeItem from "../components/ResumeItem.astro";
     margin-bottom: 1rem;
   }
 
+  .c-about__skill-section {
+    grid-column: span 2;
+  }
+
+  .c-about__skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+
   .content {
     padding: 1em;
     border-radius: 1em;
@@ -91,6 +121,7 @@ import ResumeItem from "../components/ResumeItem.astro";
     .c-about__resume {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: unset;
       gap: 2rem;
       padding: 2rem 0;
     }
