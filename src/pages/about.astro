@@ -10,15 +10,15 @@ import ResumeItem from "../components/ResumeItem.astro";
   title="About | Kevin Sommer"
   description="About Kevin Sommer">
   <div class="stack gap-20">
-    <main class="wrapper about">
+    <main class="wrapper c-about">
       <Hero
         title="About"
         tagline="Thanks for stopping by. Read below to learn more about myself and my background." />
 
-      <div class="resume">
+      <div class="c-about__resume">
         <div class="content">
-          <h4 class="resume-title">Work Experience</h4>
-          
+          <h4 class="c-about__resume-title">Work Experience</h4>
+
           <ResumeItem
             jobTitle="Frontend Developer"
             timePeriod="Nov 2019 - Jun 2023"
@@ -39,7 +39,7 @@ import ResumeItem from "../components/ResumeItem.astro";
         </div>
 
         <div class="content">
-          <h4 class="resume-title">Education</h4>
+          <h4 class="c-about__resume-title">Education</h4>
 
           <ResumeItem 
             jobTitle="B.Sc. Computer Science"
@@ -61,28 +61,21 @@ import ResumeItem from "../components/ResumeItem.astro";
 </BaseLayout>
 
 <style>
-  .resume {
+  .c-about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .c-about__resume {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     padding: 2rem 0;
   }
 
-  .resume-title {
+  .c-about__resume-title {
     margin-bottom: 1rem;
-  }
-  
-  .about {
-    display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: var(--gray-200);
   }
 
   .content {
@@ -94,24 +87,8 @@ import ResumeItem from "../components/ResumeItem.astro";
     gap: 1rem;
   }
 
-  .content :global(a) {
-    text-decoration: 1px solid underline transparent;
-    text-underline-offset: 0.25em;
-    transition: text-decoration-color var(--theme-transition);
-  }
-
-  .content :global(a:hover),
-  .content :global(a:focus) {
-    text-decoration-color: currentColor;
-  }
-
   @media (min-width: 50em) {
-    section {
-      display: contents;
-      font-size: var(--text-lg);
-    }
-
-    .resume {
+    .c-about__resume {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
